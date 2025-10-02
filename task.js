@@ -1,7 +1,7 @@
 const readline = require("readline");
 
 // Функція для створення матриці
-function createMatrix(rows, cols, min = -10, max = 10) {
+function createMatrix(rows, cols, min, max) {
   return Array.from({ length: rows }, () =>
     Array.from({ length: cols }, () =>
       Math.floor(Math.random() * (max - min + 1)) + min
@@ -12,7 +12,7 @@ function createMatrix(rows, cols, min = -10, max = 10) {
 // Функція для виводу матриці з урахуванням початкових міток рядків/стовпців
 function printMatrix(matrix, rowLabels = null, colLabels = null) {
   if (!matrix || matrix.length === 0 || matrix[0].length === 0) {
-    console.log("Матриця порожня.");
+    console.log("Матриця порожня");
     return;
   }
 
